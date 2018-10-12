@@ -19,14 +19,14 @@ module.exports = {
     }]
   },
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     modules: [
-      './src/client',
-      './node_modules'
+      path.resolve(__dirname, 'src/client'),
+      'node_modules'
     ]
   }
 }
