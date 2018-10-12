@@ -2,13 +2,11 @@ import React from 'react'
 import { hot } from 'react-hot-loader'
 import { Route, Switch } from 'react-router-dom'
 
-import LandingPage from './components/main/LandingPage'
-import DataEntryPage from './components/data/DataEntryPage'
+import { ArtistsScene } from 'scenes'
 
 const App = () => (
   <Switch>
-    <Route exact path="/" component={LandingPage} />
-    <Route path="/add" component={DataEntryPage} />
+    <Route exact path="/" component={ArtistsScene} />
   </Switch>
 )
 
