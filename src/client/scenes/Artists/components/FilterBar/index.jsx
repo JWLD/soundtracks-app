@@ -1,5 +1,11 @@
 import React from 'react'
 
-const FilterBar = () => <div>Filter Bar</div>
+import { FilterBarWrap, Input } from './style'
+
+const FilterBar = () => (
+  <FilterBarWrap>
+    <Input placeholder="Filter" />
+  </FilterBarWrap>
+)
 
 export default FilterBar
