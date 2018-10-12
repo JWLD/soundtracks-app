@@ -1,5 +1,7 @@
 import React from 'react'
 
-const Landing = () => <div>Hello, world</div>
+import { FilterBar } from './components'
+
+const Landing = () => <FilterBar />
 
 export default Landing
