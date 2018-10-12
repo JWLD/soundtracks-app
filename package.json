@@ -5,8 +5,8 @@
   "main": "server/start.js",
   "scripts": {
     "start": "node src/server/start.js",
-    "dev": "npm run sass & webpack-dev-server --hot & npm run server",
     "build": "webpack",
+    "build:dev": "webpack-dev-server --hot",
     "sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css & npm run sass:watch",
     "sass:watch": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
     "server": "nodemon --ignore ./src/client/ ./src/server/start.js"
@@ -43,7 +43,7 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "eslint": "^5.7.0",
