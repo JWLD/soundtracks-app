@@ -1,21 +1,15 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react'
+import { hot } from 'react-hot-loader'
+import { Route, Switch } from 'react-router-dom'
 
-import store from './redux/store';
-import LandingPage from './components/main/LandingPage';
-import DataEntryPage from './components/data/DataEntryPage';
+import LandingPage from './components/main/LandingPage'
+import DataEntryPage from './components/data/DataEntryPage'
 
 const App = () => (
-  <BrowserRouter>
-    <Provider store={store}>
-      <Switch>
-				<Route path="/add" component={DataEntryPage} />
-        <Route path="/" component={LandingPage} />
-      </Switch>
-    </Provider>
-  </BrowserRouter>
-);
+  <Switch>
+    <Route exact path="/" component={LandingPage} />
+    <Route path="/add" component={DataEntryPage} />
+  </Switch>
+)
 
-render(<App />, document.getElementById('root'));
+export default hot(module)(App)

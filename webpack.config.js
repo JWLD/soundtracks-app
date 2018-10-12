@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/client/App.jsx',
+  entry: './src/client/index.js',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
@@ -17,7 +17,11 @@ module.exports = {
   },
   devtool: 'cheap-eval-source-map',
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'],
+		modules: [
+			'./src/client',
+			'./node_modules'
+		]
   },
   module: {
     rules: [
