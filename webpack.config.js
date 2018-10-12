@@ -12,6 +12,7 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   entry: './src/client/index.js',
+  mode: 'development',
   module: {
     rules: [{
       test: /\.jsx?$/,
