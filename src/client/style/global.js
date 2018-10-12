@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
     border-radius: 0;
     box-sizing: border-box;
+    font-family: 'Asap Condensed', sans-serif;
     margin: 0;
     padding: 0;
   }
