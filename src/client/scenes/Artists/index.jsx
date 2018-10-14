@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { SearchBar } from './components'
+import { SearchBar } from 'components'
 
 const Artists = () => <SearchBar />
 
