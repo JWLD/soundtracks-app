@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { hot } from 'react-hot-loader'
 import { Route, Switch } from 'react-router-dom'
 
-import { ArtistsScene } from 'scenes'
+import { Artists } from 'scenes'
 import GlobalStyle from 'style/global'
 
 const App = () => (
@@ -10,7 +10,7 @@ const App = () => (
     <GlobalStyle />
 
     <Switch>
-      <Route exact path="/" component={ArtistsScene} />
+      <Route exact path="/" component={Artists} />
     </Switch>
   </Fragment>
 )

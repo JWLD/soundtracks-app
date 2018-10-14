@@ -2,6 +2,6 @@ import React from 'react'
 
 import { SearchBar } from './components'
 
-const Landing = () => <SearchBar />
+const Artists = () => <SearchBar />
 
-export default Landing
+export default Artists
