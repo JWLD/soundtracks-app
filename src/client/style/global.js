@@ -10,16 +10,30 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  a {
+    :hover {
+      cursor: pointer;
+    }
+  }
+
   body {
     background-color: #21252b;
   }
 
-  html {
-    font-size: 62.5%;
+  button {
+    background-color: transparent;
+
+    :focus {
+      outline: none;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
   }
 
-  a:hover, button:hover {
-    cursor: pointer;
+  html {
+    font-size: 62.5%;
   }
 `
 
