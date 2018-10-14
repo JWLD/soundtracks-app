@@ -9,14 +9,17 @@
   "plugins": ["import", "jsx-a11y", "react"],
   "rules": {
 		"comma-dangle": ["error", "never"],
+    "no-underscore-dangle": "off",
+    "semi": ["error", "never"],
+
 		"import/prefer-default-export": "off",
+
     "react/jsx-filename-extension": ["error", {
       "extensions": [".js", ".jsx"]
     }],
     "react/sort-prop-types": ["error", {
       "ignoreCase": true
-    }],
-		"semi": ["error", "never"]
+    }]
   },
   "settings": {
     "import/resolver": "webpack"
