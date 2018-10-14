@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from 'App'
 import initialiseApp from 'helpers/initialise'
-import store from 'redux/store'
+import store from 'state/store'
 
 initialiseApp()
 
