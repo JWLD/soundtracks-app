@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { vars } from 'style'
 
-export const FilterBarWrap = styled.div`
+export const SearchBarWrap = styled.div`
   background-color: #373e48;
   box-shadow: 0 0 1.5rem 0.1rem black;
   height: ${vars.navBarHeight};

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { FilterBar } from './components'
+import { SearchBar } from './components'
 
-const Landing = () => <FilterBar />
+const Landing = () => <SearchBar />
 
 export default Landing

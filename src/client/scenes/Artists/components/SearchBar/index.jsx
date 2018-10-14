@@ -6,10 +6,10 @@ import { connect } from 'react-redux'
 import { getSearchTerm } from 'state/app/selectors'
 
 import { resetSearchTerm, setSearchTerm } from './actions'
-import { FilterBarWrap, Input, ResetButton } from './style'
+import { Input, ResetButton, SearchBarWrap } from './style'
 
-const FilterBar = ({ resetSearchTerm, searchTerm, setSearchTerm }) => (
-  <FilterBarWrap>
+const SearchBar = ({ resetSearchTerm, searchTerm, setSearchTerm }) => (
+  <SearchBarWrap>
     <Input
       onChange={event => setSearchTerm({ searchTerm: event.target.value })}
       placeholder="Filter"
@@ -21,10 +21,10 @@ const FilterBar = ({ resetSearchTerm, searchTerm, setSearchTerm }) => (
         <FontAwesomeIcon icon="times-circle" />
       </ResetButton>
     )}
-  </FilterBarWrap>
+  </SearchBarWrap>
 )
 
-FilterBar.propTypes = {
+SearchBar.propTypes = {
   resetSearchTerm: PropTypes.func.isRequired,
   searchTerm: PropTypes.string.isRequired,
   setSearchTerm: PropTypes.func.isRequired
@@ -42,4 +42,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(FilterBar)
+)(SearchBar)
