@@ -32,3 +32,16 @@ export const Input = styled.input`
     color: #aaa;
   }
 `
+
+export const ResetButton = styled.button`
+  color: #aaa;
+  font-size: 3rem;
+  height: ${vars.navBarHeight};
+  position: absolute;
+  right: 1.7rem;
+  top: 0;
+
+  :hover {
+    color: #bbb;
+  }
+`
