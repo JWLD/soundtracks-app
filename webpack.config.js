@@ -1,4 +1,5 @@
 const path = require('path')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 module.exports = {
   devServer: {
@@ -23,6 +24,13 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+      reportFilename: path.resolve(__dirname, 'dev/analysis/report.html')
+    })
+  ],
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     modules: [
