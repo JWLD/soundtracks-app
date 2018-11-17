@@ -1,0 +1,1 @@
+export ArtistTiles from './ArtistTiles'
