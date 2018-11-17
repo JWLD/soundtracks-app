@@ -1,1 +1,1 @@
-export { default as Artists } from './Artists'
+export Artists from './Artists'
