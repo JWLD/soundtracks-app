@@ -32,7 +32,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.mjs', '.js', '.jsx', '.json'],
     modules: [
       path.resolve(__dirname, 'src/client'),
       'node_modules'
