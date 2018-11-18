@@ -18,7 +18,7 @@ export const Input = styled.input`
   background-color: #4f5664;
   border-radius: 0.2rem;
   color: white;
-  font-size: 3rem;
+  font-size: 2.2rem;
   height: 100%;
   padding: 1rem;
   text-transform: capitalize;
