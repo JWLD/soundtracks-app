@@ -2,8 +2,8 @@ import React from 'react'
 
 import { ComposerTile } from './components'
 import withData from './data'
-import { composersPropType } from './prop_types'
-import * as SC from './styled'
+import { composersPropType } from './propTypes'
+import * as SC from './style'
 
 const ComposerList = ({ composers }) => {
   const tiles = composers.map(composer => (

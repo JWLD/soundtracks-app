@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import * as SC from './styled'
+import * as SC from './style'
 
 const ComposerTile = ({ name }) => (
   <SC.Tile>
