@@ -8,6 +8,7 @@
   "parser": "babel-eslint",
   "plugins": ["import", "jsx-a11y", "react"],
   "rules": {
+    "arrow-body-style": "off",
     "arrow-parens": "off",
 		"comma-dangle": ["error", "never"],
     "no-console": "off",
