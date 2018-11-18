@@ -2,15 +2,14 @@ import styled from 'styled-components'
 
 import { vars } from 'style'
 
-export const TileGrid = styled.div`
-  display: flex;
-  margin-top: ${vars.navBarHeight};
-  min-height: calc(100vh - ${vars.navBarHeight});
-`
+const gridGap = '1rem'
+const minTileSize = '13rem'
 
-export const ComposerTile = styled.span`
-  height: 100px;
-  color: white;
-  font-size: 30px;
-  margin: 30px 30px;
+export const TileGrid = styled.div`
+  display: grid;
+  grid-gap: ${gridGap};
+  grid-template-columns: repeat(auto-fill, minmax(${minTileSize}, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(${minTileSize}, 1fr));
+  margin: ${gridGap};
+  margin-top: calc(${gridGap} + ${vars.navBarHeight});
 `
