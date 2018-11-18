@@ -19,7 +19,7 @@ export const TileContent = styled.div`
 
   bottom: 0;
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   left: 0;
   padding: 0.8rem;
   position: absolute;
