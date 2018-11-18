@@ -4,7 +4,7 @@ import withData from './data'
 import { composersPropType } from './prop_types'
 import * as SC from './styled'
 
-const ArtistTiles = ({ composers }) => {
+const ComposerList = ({ composers }) => {
   const tiles = composers.map(composer => (
     <SC.ComposerTile key={composer.id}>{composer.name}</SC.ComposerTile>
   ))
@@ -12,12 +12,12 @@ const ArtistTiles = ({ composers }) => {
   return <SC.TileGrid>{tiles}</SC.TileGrid>
 }
 
-ArtistTiles.propTypes = {
+ComposerList.propTypes = {
   composers: composersPropType
 }
 
-ArtistTiles.defaultProps = {
+ComposerList.defaultProps = {
   composers: []
 }
 
-export default withData(ArtistTiles)
+export default withData(ComposerList)

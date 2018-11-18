@@ -1,1 +1,1 @@
-export Artists from './Artists'
+export Composers from './Composers'
