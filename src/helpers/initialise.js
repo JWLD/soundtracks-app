@@ -1,4 +1,4 @@
-import initialiseIconLibrary from 'style/fontAwesome'
+import initialiseIconLibrary from 'services/fontAwesome'
 
 const initialiseApp = () => {
   initialiseIconLibrary()
