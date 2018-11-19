@@ -4,15 +4,10 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 module.exports = {
   devServer: {
     contentBase: './public',
-    historyApiFallback: true,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8070'
-      }
-    }
+    historyApiFallback: true
   },
   devtool: 'eval-source-map',
-  entry: './src/client/index.js',
+  entry: './src/index.js',
   mode: 'development',
   module: {
     rules: [{
@@ -34,7 +29,7 @@ module.exports = {
   resolve: {
     extensions: ['.mjs', '.js', '.jsx', '.json'],
     modules: [
-      path.resolve(__dirname, 'src/client'),
+      path.resolve(__dirname, 'src'),
       'node_modules'
     ]
   }
