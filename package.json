@@ -33,6 +33,7 @@
     "dotenv": "^6.1.0",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
+    "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-apollo": "^2.3.1",
