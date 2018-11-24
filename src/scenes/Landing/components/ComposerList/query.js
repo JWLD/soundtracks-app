@@ -14,8 +14,8 @@ const GET_COMPOSERS = gql`
   }
 `
 
-const filterComposers = ({ data }) => {
-  if (!data.composers) return []
+const filterComposers = ({ data, error, loading }) => {
+  if (error || loading) return []
 
   return data.composers.filter(composer => {
     return checkStringForSubString({
@@ -27,6 +27,8 @@ const filterComposers = ({ data }) => {
 
 export default Component => () => (
   <Query query={GET_COMPOSERS}>
-    {({ data }) => <Component composers={filterComposers({ data })} />}
+    {({ data, error, loading }) => (
+      <Component composers={filterComposers({ data, error, loading })} />
+    )}
   </Query>
 )
