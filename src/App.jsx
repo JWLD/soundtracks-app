@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { hot } from 'react-hot-loader'
 import { Route, Switch } from 'react-router-dom'
 
+import * as ROUTES from 'constants/routes'
 import { Composers } from 'scenes'
 import GlobalStyle from 'style/global'
 
@@ -10,7 +11,7 @@ const App = () => (
     <GlobalStyle />
 
     <Switch>
-      <Route exact path="/" component={Composers} />
+      <Route exact path={ROUTES.HOME} component={Composers} />
     </Switch>
   </Fragment>
 )
