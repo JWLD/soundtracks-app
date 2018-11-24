@@ -30,6 +30,6 @@ FilterBar.propTypes = {
 }
 
 export default compose(
-  withData,
-  withUpdateCache
+  withUpdateCache,
+  withData
 )(FilterBar)

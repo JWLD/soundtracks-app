@@ -1,5 +1,5 @@
 import gql from 'graphql-tag'
-import React from 'react'
+import React, { Component } from 'react'
 import { Query } from 'react-apollo'
 
 const GET_FILTER = gql`
@@ -8,10 +8,18 @@ const GET_FILTER = gql`
   }
 `
 
-const withData = Component => props => (
-  <Query query={GET_FILTER}>
-    {({ data }) => <Component {...props} {...data} />}
-  </Query>
-)
+const withData = WrappedComponent => class extends Component {
+  componentWillMount() {
+    this.props.updateCache({ filter: '' })
+  }
+
+  render() {
+    return (
+      <Query query={GET_FILTER}>
+        {({ data }) => <WrappedComponent {...this.props} {...data} />}
+      </Query>
+    )
+  }
+}
 
 export default withData

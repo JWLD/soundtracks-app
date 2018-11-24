@@ -1,5 +1,7 @@
 import React from 'react'
 
-const Composer = () => <div>Composer</div>
+import { FilterBar } from 'components'
+
+const Composer = () => <FilterBar />
 
 export default Composer
