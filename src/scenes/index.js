@@ -1,1 +1,1 @@
-export Composers from './Composers'
+export Landing from './Landing'
