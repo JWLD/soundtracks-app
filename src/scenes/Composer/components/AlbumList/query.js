@@ -11,6 +11,7 @@ const GET_COMPOSER_ALBUMS = gql`
       albums {
         artworkUrl
         id
+        spotifyId
         title
       }
     }

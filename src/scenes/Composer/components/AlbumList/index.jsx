@@ -17,6 +17,7 @@ AlbumList.propTypes = {
     PropTypes.shape({
       artworkUrl: PropTypes.string,
       id: PropTypes.string.isRequired,
+      spotifyId: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
     })
   ).isRequired
