@@ -2,6 +2,13 @@ import React from 'react'
 
 import { FilterBar } from 'components'
 
-const Composer = () => <FilterBar />
+import { AlbumList } from './components'
+
+const Composer = () => (
+  <>
+    <FilterBar />
+    <AlbumList />
+  </>
+)
 
 export default Composer
