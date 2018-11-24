@@ -1,2 +1,2 @@
-export const COMPOSERS = '/composers'
+export const COMPOSER = '/composer'
 export const LANDING = '/'

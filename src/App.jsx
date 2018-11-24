@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader'
 import { Route, Switch } from 'react-router-dom'
 
 import * as ROUTES from 'constants/routes'
-import { Landing } from 'scenes'
+import { Composer, Landing } from 'scenes'
 import GlobalStyle from 'style/global'
 
 const App = () => (
@@ -12,6 +12,7 @@ const App = () => (
 
     <Switch>
       <Route exact path={ROUTES.LANDING} component={Landing} />
+      <Route path={`${ROUTES.COMPOSER}/:composerId`} component={Composer} />
     </Switch>
   </Fragment>
 )

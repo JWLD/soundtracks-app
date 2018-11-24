@@ -6,7 +6,7 @@ import * as ROUTES from 'constants/routes'
 import * as SC from './style'
 
 const ComposerTile = ({ id, name }) => (
-  <SC.Tile to={`${ROUTES.COMPOSERS}/${id}`}>
+  <SC.Tile to={`${ROUTES.COMPOSER}/${id}`}>
     <SC.TileContent>{name}</SC.TileContent>
   </SC.Tile>
 )
