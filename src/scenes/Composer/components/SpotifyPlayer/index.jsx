@@ -5,18 +5,19 @@ import * as SC from './styled'
 import withData from './query'
 
 const SpotifyPlayer = ({ selectedAlbumId }) => {
-  if (!selectedAlbumId) return <div>SELECT STH</div>
+  const renderIframe = () => (
+    <SC.SpotifyIframe
+      allow="encrypted-media"
+      allowtransparency="true"
+      frameBorder="0"
+      key={selectedAlbumId}
+      src={`https://open.spotify.com/embed/album/${selectedAlbumId}`}
+    />
+  )
 
   return (
     <SC.SpotifyPlayerWrap>
-      <SC.SpotifyIframe
-        allow="encrypted-media"
-        allowtransparency="true"
-        frameBorder="0"
-        key={selectedAlbumId}
-        src={`https://open.spotify.com/embed/album/${selectedAlbumId}`}
-        width="300px"
-      />
+      {selectedAlbumId ? renderIframe() : 'Please select an album.'}
     </SC.SpotifyPlayerWrap>
   )
 }

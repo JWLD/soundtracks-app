@@ -1,13 +1,19 @@
 import styled from 'styled-components'
 
-import { vars } from 'style'
+import { mixins, vars } from 'style'
 
 export const SpotifyPlayerWrap = styled.div`
+  ${mixins.flex};
+
   background: #373e48;
   box-shadow: 0 0 1.5rem 0.1rem black;
+  color: white;
+  font-size: 2rem;
   height: calc(100vh - ${vars.navBarHeight});
   margin-top: ${vars.navBarHeight};
-  width: 300px;
+  padding-left: 0.8rem;
+  text-align: center;
+  width: 30.8rem;
 `
 
 export const SpotifyIframe = styled.iframe`
