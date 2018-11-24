@@ -8,7 +8,7 @@ const cache = new InMemoryCache()
 
 const stateLink = withClientState({
   cache,
-  defaults: { filter: '' },
+  defaults: { filter: '', selectedAlbumId: '' },
   resolvers: {}
 })
 
