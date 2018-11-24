@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { compose } from 'react-apollo'
+import { withRouter } from 'react-router-dom'
 
 import { TileGrid } from 'components'
 
@@ -19,4 +21,7 @@ AlbumList.propTypes = {
   ).isRequired
 }
 
-export default withData(AlbumList)
+export default compose(
+  withRouter,
+  withData
+)(AlbumList)
