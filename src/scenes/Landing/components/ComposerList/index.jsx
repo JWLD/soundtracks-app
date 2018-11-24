@@ -1,17 +1,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import { TileGrid } from 'components'
+
 import { ComposerTile } from './components'
 import withData from './query'
-import * as SC from './style'
 
-const ComposerList = ({ composers }) => {
-  const tiles = composers.map(composer => (
-    <ComposerTile key={composer.id} {...composer} />
-  ))
-
-  return <SC.TileGrid>{tiles}</SC.TileGrid>
-}
+const ComposerList = ({ composers }) => (
+  <TileGrid data={composers} tileComponent={ComposerTile} />
+)
 
 ComposerList.propTypes = {
   composers: PropTypes.arrayOf(

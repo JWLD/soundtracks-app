@@ -1,0 +1,1 @@
+export AlbumTile from './AlbumTile'

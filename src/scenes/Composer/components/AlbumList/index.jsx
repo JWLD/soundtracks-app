@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import { TileGrid } from 'components'
+
+import { AlbumTile } from './components'
 import withData from './query'
 
-const AlbumList = ({ albums }) => {
-  console.log(albums)
-
-  return <div>Album List</div>
-}
+const AlbumList = ({ albums }) => (
+  <TileGrid data={albums} tileComponent={AlbumTile} />
+)
 
 AlbumList.propTypes = {
   albums: PropTypes.arrayOf(

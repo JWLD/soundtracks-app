@@ -5,7 +5,7 @@ import { vars } from 'style'
 const gridGap = '1rem'
 const minTileSize = '13rem'
 
-export const TileGrid = styled.div`
+export const TileGridWrap = styled.div`
   display: grid;
   grid-gap: ${gridGap};
   grid-template-columns: repeat(auto-fill, minmax(${minTileSize}, 1fr));
