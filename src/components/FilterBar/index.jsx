@@ -1,21 +1,23 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { compose } from 'react-apollo'
 
 import { withUpdateCache } from 'HOCs'
 
+import withData from './query'
 import { Input, ResetButton, FilterBarWrap } from './style'
 
-const FilterBar = ({ stateKey, updateCache, value }) => (
+const FilterBar = ({ filter, updateCache }) => (
   <FilterBarWrap>
     <Input
-      onChange={e => updateCache({ [stateKey]: e.target.value })}
+      onChange={e => updateCache({ filter: e.target.value })}
       placeholder="Filter"
-      value={value}
+      value={filter}
     />
 
-    {value && (
-      <ResetButton onClick={() => updateCache({ [stateKey]: '' })}>
+    {filter && (
+      <ResetButton onClick={() => updateCache({ filter: '' })}>
         <FontAwesomeIcon icon="times-circle" />
       </ResetButton>
     )}
@@ -23,9 +25,11 @@ const FilterBar = ({ stateKey, updateCache, value }) => (
 )
 
 FilterBar.propTypes = {
-  stateKey: PropTypes.string.isRequired,
-  updateCache: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired
+  filter: PropTypes.string.isRequired,
+  updateCache: PropTypes.func.isRequired
 }
 
-export default withUpdateCache(FilterBar)
+export default compose(
+  withData,
+  withUpdateCache
+)(FilterBar)

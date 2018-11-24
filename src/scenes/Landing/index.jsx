@@ -1,10 +1,12 @@
 import React from 'react'
 
-import { ComposerList, ComposersFilter } from './components'
+import { FilterBar } from 'components'
+
+import { ComposerList } from './components'
 
 const Landing = () => (
   <>
-    <ComposersFilter />
+    <FilterBar />
     <ComposerList />
   </>
 )

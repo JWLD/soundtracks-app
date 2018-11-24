@@ -10,7 +10,7 @@ const GET_COMPOSERS = gql`
       id
       name
     }
-    composersFilter @client
+    filter @client
   }
 `
 
@@ -20,7 +20,7 @@ const filterComposers = ({ data }) => {
   return data.composers.filter(composer => {
     return checkStringForSubString({
       string: composer.name,
-      subString: data.composersFilter
+      subString: data.filter
     })
   })
 }

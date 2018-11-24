@@ -8,7 +8,7 @@ const cache = new InMemoryCache()
 
 const stateLink = withClientState({
   cache,
-  defaults: { composersFilter: '' },
+  defaults: { filter: '' },
   resolvers: {}
 })
 
