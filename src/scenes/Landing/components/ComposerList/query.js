@@ -25,10 +25,8 @@ const filterComposers = ({ data }) => {
   })
 }
 
-const withData = Component => () => (
+export default Component => () => (
   <Query query={GET_COMPOSERS}>
     {({ data }) => <Component composers={filterComposers({ data })} />}
   </Query>
 )
-
-export default withData
