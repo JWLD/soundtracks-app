@@ -21,6 +21,9 @@
     "react/jsx-filename-extension": ["error", {
       "extensions": [".js", ".jsx"]
     }],
+    "react/jsx-sort-props": ["error", {
+      "ignoreCase": true
+    }],
     "react/sort-prop-types": ["error", {
       "ignoreCase": true
     }]

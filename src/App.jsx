@@ -11,8 +11,8 @@ const App = () => (
     <GlobalStyle />
 
     <Switch>
-      <Route exact path={ROUTES.LANDING} component={Landing} />
-      <Route path={`${ROUTES.COMPOSER}/:composerId`} component={Composer} />
+      <Route component={Landing} exact path={ROUTES.LANDING} />
+      <Route component={Composer} path={`${ROUTES.COMPOSER}/:composerId`} />
     </Switch>
   </Fragment>
 )
