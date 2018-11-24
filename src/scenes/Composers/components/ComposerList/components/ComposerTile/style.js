@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { mixins } from 'style'
 
-export const Tile = styled.button`
+export const Tile = styled(Link)`
   background-color: #333;
   border-radius: 0.2rem;
   box-shadow: 0 0.5rem 1.5rem -0.5rem black;
