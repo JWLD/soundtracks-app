@@ -1,28 +1,26 @@
 import gql from 'graphql-tag'
-import PropTypes from 'prop-types'
 import React from 'react'
 import { Query } from 'react-apollo'
-import { connect } from 'react-redux'
 
 import { checkStringForSubString } from 'helpers/filtering'
-import { getSearchTerm } from 'state/app/selectors'
 
-const QUERY = gql`
+const GET_COMPOSERS = gql`
   query ComposerList {
     composers {
       id
       name
     }
+    composersFilter @client
   }
 `
 
-const processData = ({ data, searchTerm }) => {
-  if (!data.composers) return data
+const processData = ({ data }) => {
+  if (!data.composers) return []
 
   const filteredComposers = data.composers.filter(composer => {
     return checkStringForSubString({
       string: composer.name,
-      subString: searchTerm
+      subString: data.composersFilter
     })
   })
 
@@ -31,26 +29,10 @@ const processData = ({ data, searchTerm }) => {
   }
 }
 
-const withData = Component => {
-  const Wrapper = ({ searchTerm }) => (
-    <Query query={QUERY}>
-      {({ data }) => {
-        const processedData = processData({ data, searchTerm })
-
-        return <Component {...processedData} />
-      }}
-    </Query>
-  )
-
-  Wrapper.propTypes = {
-    searchTerm: PropTypes.string.isRequired
-  }
-
-  const mapStateToProps = state => ({
-    searchTerm: getSearchTerm(state)
-  })
-
-  return connect(mapStateToProps)(Wrapper)
-}
+const withData = Component => () => (
+  <Query query={GET_COMPOSERS}>
+    {({ data }) => <Component {...processData({ data })} />}
+  </Query>
+)
 
 export default withData
