@@ -9,6 +9,7 @@ const GET_COMPOSER_ALBUMS = gql`
   query ComposerAlbums($composerId: ID!) {
     composer(id: $composerId) {
       albums {
+        artworkUrl
         id
         title
       }

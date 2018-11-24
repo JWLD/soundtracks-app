@@ -15,6 +15,7 @@ const AlbumList = ({ albums }) => (
 AlbumList.propTypes = {
   albums: PropTypes.arrayOf(
     PropTypes.shape({
+      artworkUrl: PropTypes.string,
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
     })
