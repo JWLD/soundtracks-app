@@ -1,23 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { connect } from 'react-redux'
 
-import { getSearchTerm } from 'state/app/selectors'
+import { withUpdateCache } from 'HOCs'
 
-import { resetSearchTerm, setSearchTerm } from './actions'
 import { Input, ResetButton, SearchBarWrap } from './style'
 
-const SearchBar = ({ resetSearchTerm, searchTerm, setSearchTerm }) => (
+const SearchBar = ({ stateKey, updateCache, value }) => (
   <SearchBarWrap>
     <Input
-      onChange={event => setSearchTerm({ searchTerm: event.target.value })}
+      onChange={e => updateCache({ [stateKey]: e.target.value })}
       placeholder="Filter"
-      value={searchTerm}
+      value={value}
     />
 
-    {searchTerm && (
-      <ResetButton onClick={resetSearchTerm}>
+    {value && (
+      <ResetButton onClick={() => updateCache({ [stateKey]: '' })}>
         <FontAwesomeIcon icon="times-circle" />
       </ResetButton>
     )}
@@ -25,21 +23,9 @@ const SearchBar = ({ resetSearchTerm, searchTerm, setSearchTerm }) => (
 )
 
 SearchBar.propTypes = {
-  resetSearchTerm: PropTypes.func.isRequired,
-  searchTerm: PropTypes.string.isRequired,
-  setSearchTerm: PropTypes.func.isRequired
+  stateKey: PropTypes.string.isRequired,
+  updateCache: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
 }
 
-const mapStateToProps = state => ({
-  searchTerm: getSearchTerm(state)
-})
-
-const mapDispatchToProps = {
-  resetSearchTerm,
-  setSearchTerm
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SearchBar)
+export default withUpdateCache(SearchBar)

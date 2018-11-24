@@ -1,13 +1,10 @@
 import React from 'react'
 
-import { SearchBar } from 'components'
-
-import { ComposerList } from './components'
+import { ComposerList, ComposersFilter } from './components'
 
 const Composers = () => (
   <>
-    <SearchBar />
-
+    <ComposersFilter />
     <ComposerList />
   </>
 )
