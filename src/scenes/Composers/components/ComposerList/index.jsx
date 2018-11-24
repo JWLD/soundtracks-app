@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { ComposerTile } from './components'
-import withData from './data'
 import { composersPropType } from './propTypes'
+import withData from './query'
 import * as SC from './style'
 
 const ComposerList = ({ composers }) => {

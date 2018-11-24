@@ -14,24 +14,20 @@ const GET_COMPOSERS = gql`
   }
 `
 
-const processData = ({ data }) => {
+const filterComposers = ({ data }) => {
   if (!data.composers) return []
 
-  const filteredComposers = data.composers.filter(composer => {
+  return data.composers.filter(composer => {
     return checkStringForSubString({
       string: composer.name,
       subString: data.composersFilter
     })
   })
-
-  return {
-    composers: filteredComposers
-  }
 }
 
 const withData = Component => () => (
   <Query query={GET_COMPOSERS}>
-    {({ data }) => <Component {...processData({ data })} />}
+    {({ data }) => <Component composers={filterComposers({ data })} />}
   </Query>
 )
 
