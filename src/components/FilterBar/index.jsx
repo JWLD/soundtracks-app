@@ -4,10 +4,10 @@ import React from 'react'
 
 import { withUpdateCache } from 'HOCs'
 
-import { Input, ResetButton, SearchBarWrap } from './style'
+import { Input, ResetButton, FilterBarWrap } from './style'
 
-const SearchBar = ({ stateKey, updateCache, value }) => (
-  <SearchBarWrap>
+const FilterBar = ({ stateKey, updateCache, value }) => (
+  <FilterBarWrap>
     <Input
       onChange={e => updateCache({ [stateKey]: e.target.value })}
       placeholder="Filter"
@@ -19,13 +19,13 @@ const SearchBar = ({ stateKey, updateCache, value }) => (
         <FontAwesomeIcon icon="times-circle" />
       </ResetButton>
     )}
-  </SearchBarWrap>
+  </FilterBarWrap>
 )
 
-SearchBar.propTypes = {
+FilterBar.propTypes = {
   stateKey: PropTypes.string.isRequired,
   updateCache: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired
 }
 
-export default withUpdateCache(SearchBar)
+export default withUpdateCache(FilterBar)
