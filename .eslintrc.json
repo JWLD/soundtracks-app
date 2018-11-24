@@ -27,6 +27,9 @@
     "react/jsx-sort-props": ["error", {
       "ignoreCase": true
     }],
+    "react/no-unknown-property": ["error", {
+      "ignore": ["allowtransparency"]
+    }],
     "react/sort-prop-types": ["error", {
       "ignoreCase": true
     }]
