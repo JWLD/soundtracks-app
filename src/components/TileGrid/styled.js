@@ -6,7 +6,7 @@ const gridGap = '1rem'
 const minTileSize = '13rem'
 
 export const TileGridWrap = styled.div`
-  background: ${vars.colour1};
+  background: ${vars.color1};
   border-top-right-radius: 0.6rem;
   box-shadow: inset -1.3rem 1.3rem 1.3rem -1.3rem black;
   display: grid;

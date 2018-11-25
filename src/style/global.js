@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${vars.colour2};
+    background-color: ${vars.color2};
   }
 
   button {

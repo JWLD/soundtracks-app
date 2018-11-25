@@ -10,7 +10,7 @@ export const FilterBarWrap = styled.div`
 `
 
 export const Input = styled.input`
-  background-color: ${vars.colour3};
+  background-color: ${vars.color3};
   border-radius: 0.2rem;
   color: white;
   font-size: 2.2rem;
