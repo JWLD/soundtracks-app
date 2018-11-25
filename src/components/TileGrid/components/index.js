@@ -1,2 +1,2 @@
-export AlbumList from './AlbumList'
-export ComposerList from './ComposerList'
+export AlbumTiles from './AlbumTiles'
+export ComposerTiles from './ComposerTiles'

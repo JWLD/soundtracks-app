@@ -5,7 +5,7 @@ import { Query } from 'react-apollo'
 import { checkStringForSubString } from 'helpers/filtering'
 
 const GET_COMPOSERS = gql`
-  query ComposerList {
+  query ComposerTiles {
     composers {
       id
       name

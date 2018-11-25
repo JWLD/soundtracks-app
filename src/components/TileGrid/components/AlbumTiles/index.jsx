@@ -6,11 +6,11 @@ import { withRouter } from 'react-router-dom'
 import { AlbumTile } from './components'
 import withData from './query'
 
-const AlbumList = ({ albums }) => {
+const AlbumTiles = ({ albums }) => {
   return albums.map(album => <AlbumTile key={album.id} {...album} />)
 }
 
-AlbumList.propTypes = {
+AlbumTiles.propTypes = {
   albums: PropTypes.arrayOf(
     PropTypes.shape({
       artworkUrl: PropTypes.string,
@@ -24,4 +24,4 @@ AlbumList.propTypes = {
 export default compose(
   withRouter,
   withData
-)(AlbumList)
+)(AlbumTiles)

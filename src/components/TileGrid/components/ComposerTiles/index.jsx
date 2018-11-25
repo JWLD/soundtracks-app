@@ -4,13 +4,13 @@ import React from 'react'
 import { ComposerTile } from './components'
 import withData from './query'
 
-const ComposerList = ({ composers }) => {
+const ComposerTiles = ({ composers }) => {
   return composers.map(composer => (
     <ComposerTile key={composer.id} {...composer} />
   ))
 }
 
-ComposerList.propTypes = {
+ComposerTiles.propTypes = {
   composers: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -19,4 +19,4 @@ ComposerList.propTypes = {
   ).isRequired
 }
 
-export default withData(ComposerList)
+export default withData(ComposerTiles)
