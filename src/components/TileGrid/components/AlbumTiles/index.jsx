@@ -3,11 +3,21 @@ import React from 'react'
 import { compose } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 
-import { AlbumTile } from './components'
-import withData from './query'
+import { withUpdateCache } from 'HOCs'
 
-const AlbumTiles = ({ albums }) => {
-  return albums.map(album => <AlbumTile key={album.id} {...album} />)
+import withData from './query'
+import * as SC from './style'
+
+const AlbumTiles = ({ albums, updateCache }) => {
+  return albums.map(album => (
+    <SC.AlbumTile
+      imageUrl={album.artworkUrl}
+      key={album.id}
+      onClick={() => updateCache({ selectedAlbumId: album.spotifyId })}
+    >
+      <SC.TileContent>{album.title}</SC.TileContent>
+    </SC.AlbumTile>
+  ))
 }
 
 AlbumTiles.propTypes = {
@@ -18,10 +28,12 @@ AlbumTiles.propTypes = {
       spotifyId: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
     })
-  ).isRequired
+  ).isRequired,
+  updateCache: PropTypes.func.isRequired
 }
 
 export default compose(
   withRouter,
-  withData
+  withData,
+  withUpdateCache
 )(AlbumTiles)
