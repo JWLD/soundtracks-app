@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { TileGrid } from 'components'
-
 import { ComposerTile } from './components'
 import withData from './query'
 
-const ComposerList = ({ composers }) => (
-  <TileGrid data={composers} tileComponent={ComposerTile} />
-)
+const ComposerList = ({ composers }) => {
+  return composers.map(composer => (
+    <ComposerTile key={composer.id} {...composer} />
+  ))
+}
 
 ComposerList.propTypes = {
   composers: PropTypes.arrayOf(
@@ -16,11 +16,7 @@ ComposerList.propTypes = {
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired
     })
-  )
-}
-
-ComposerList.defaultProps = {
-  composers: []
+  ).isRequired
 }
 
 export default withData(ComposerList)

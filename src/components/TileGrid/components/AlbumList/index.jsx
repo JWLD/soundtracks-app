@@ -3,14 +3,12 @@ import React from 'react'
 import { compose } from 'react-apollo'
 import { withRouter } from 'react-router-dom'
 
-import { TileGrid } from 'components'
-
 import { AlbumTile } from './components'
 import withData from './query'
 
-const AlbumList = ({ albums }) => (
-  <TileGrid data={albums} tileComponent={AlbumTile} />
-)
+const AlbumList = ({ albums }) => {
+  return albums.map(album => <AlbumTile key={album.id} {...album} />)
+}
 
 AlbumList.propTypes = {
   albums: PropTypes.arrayOf(

@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
+import * as vars from './variables'
+
 const GlobalStyle = createGlobalStyle`
   * {
     border: 0;
@@ -17,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #21252b;
+    background-color: ${vars.colour2};
   }
 
   button {
