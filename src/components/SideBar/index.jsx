@@ -4,7 +4,7 @@ import React from 'react'
 import * as SC from './styled'
 import withData from './query'
 
-const SpotifyPlayer = ({ selectedAlbumId }) => {
+const SideBar = ({ selectedAlbumId }) => {
   const renderIframe = () => (
     <SC.SpotifyIframe
       allow="encrypted-media"
@@ -16,14 +16,14 @@ const SpotifyPlayer = ({ selectedAlbumId }) => {
   )
 
   return (
-    <SC.SpotifyPlayerWrap>
+    <SC.SideBarWrap>
       {selectedAlbumId ? renderIframe() : 'Please select an album.'}
-    </SC.SpotifyPlayerWrap>
+    </SC.SideBarWrap>
   )
 }
 
-SpotifyPlayer.propTypes = {
+SideBar.propTypes = {
   selectedAlbumId: PropTypes.string.isRequired
 }
 
-export default withData(SpotifyPlayer)
+export default withData(SideBar)

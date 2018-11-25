@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { mixins, vars } from 'style'
 
-export const SpotifyPlayerWrap = styled.div`
+export const SideBarWrap = styled.div`
   ${mixins.flex};
 
   background: #373e48;
