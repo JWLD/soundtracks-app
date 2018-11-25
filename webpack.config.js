@@ -1,3 +1,4 @@
+const CircularDependencyPlugin = require('circular-dependency-plugin')
 const path = require('path')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
@@ -24,7 +25,8 @@ module.exports = {
       analyzerMode: 'static',
       openAnalyzer: false,
       reportFilename: path.resolve(__dirname, 'dev/analysis/report.html')
-    })
+    }),
+    new CircularDependencyPlugin()
   ],
   resolve: {
     extensions: ['.mjs', '.js', '.jsx', '.json'],
