@@ -1,4 +1,4 @@
 .env
 bundle.js
-dev/
+dump/
 node_modules/

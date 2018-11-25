@@ -24,7 +24,7 @@ module.exports = {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
-      reportFilename: path.resolve(__dirname, 'dev/analysis/report.html')
+      reportFilename: path.resolve(__dirname, 'dump/analysis/report.html')
     }),
     new CircularDependencyPlugin()
   ],
