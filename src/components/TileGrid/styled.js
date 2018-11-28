@@ -14,5 +14,6 @@ export const TileGridWrap = styled.div`
   grid-gap: ${gridGap};
   grid-template-columns: repeat(auto-fill, minmax(${minTileSize}, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(${minTileSize}, 1fr));
+  overflow: scroll;
   padding: ${gridGap};
 `
