@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 import * as vars from './variables'
 
-const GlobalStyle = createGlobalStyle`
+export default createGlobalStyle`
   * {
     border: 0;
     border-radius: 0;
@@ -38,5 +38,3 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 `
-
-export default GlobalStyle
