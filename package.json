@@ -2,14 +2,9 @@
   "name": "soundtracks",
   "version": "1.0.0",
   "description": "",
-  "main": "server/start.js",
   "scripts": {
-    "start": "node src/server/start.js",
     "build": "webpack",
-    "dev": "webpack-dev-server --hot",
-    "sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css & npm run sass:watch",
-    "sass:watch": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
-    "server": "nodemon --ignore ./src/client/ ./src/server/start.js"
+    "dev": "webpack-dev-server --hot"
   },
   "repository": {
     "type": "git",
