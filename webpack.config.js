@@ -5,7 +5,8 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 module.exports = {
   devServer: {
     contentBase: './public',
-    historyApiFallback: true
+    historyApiFallback: true,
+    open: true
   },
   devtool: 'eval-source-map',
   entry: './src/index.js',
