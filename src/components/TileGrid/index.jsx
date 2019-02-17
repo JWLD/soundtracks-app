@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import * as ROUTES from 'constants/routes'
 
 import { AlbumTiles, ComposerTiles } from './components'
-import * as SC from './styled'
+import * as SC from './style'
 
 const TileGrid = () => (
   <SC.TileGridWrap>

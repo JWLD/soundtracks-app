@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import * as SC from './styled'
+import * as SC from './style'
 import withData from './query'
 
 const SideBar = ({ selectedAlbumId }) => {
