@@ -9,6 +9,7 @@ export const ComposerTile = styled(Link)`
   box-shadow: 0 0.5rem 1.5rem -0.5rem black;
   padding-top: 100%;
   position: relative;
+  text-align: center;
 
   :hover {
     background-color: #3a3a3a;
