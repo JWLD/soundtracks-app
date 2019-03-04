@@ -7,12 +7,14 @@ import { AlbumTiles, ComposerTiles } from './components'
 import * as SC from './style'
 
 const TileGrid = () => (
-  <SC.TileGridWrap>
-    <Switch>
-      <Route component={ComposerTiles} exact path={ROUTES.LANDING} />
-      <Route component={AlbumTiles} path={`${ROUTES.COMPOSER}/:composerId`} />
-    </Switch>
-  </SC.TileGridWrap>
+  <SC.GridWrap>
+    <SC.TileGrid>
+      <Switch>
+        <Route component={ComposerTiles} exact path={ROUTES.LANDING} />
+        <Route component={AlbumTiles} path={`${ROUTES.COMPOSER}/:composerId`} />
+      </Switch>
+    </SC.TileGrid>
+  </SC.GridWrap>
 )
 
 export default TileGrid
