@@ -1,21 +1,4 @@
 {
-  "name": "soundtracks",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server --hot"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JWLD/soundtracks-react.git"
-  },
-  "author": "Jack Davies",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JWLD/soundtracks-react/issues"
-  },
-  "homepage": "https://github.com/JWLD/soundtracks-react#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@fortawesome/free-solid-svg-icons": "^5.5.0",
@@ -57,5 +40,9 @@
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --hot"
   }
 }
