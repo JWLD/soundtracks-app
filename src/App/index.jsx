@@ -1,7 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 
-import { FilterBar, SideBar, TileGrid } from 'components'
+import { FilterBar, SideBar, TileGrid } from './components'
 import * as SC from './style'
 
 const App = () => (
