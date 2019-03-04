@@ -7,10 +7,10 @@ import { checkStringForSubString } from 'helpers/filtering'
 
 const GET_COMPOSER_ALBUMS = gql`
   query ComposerAlbums($composerId: ID!) {
-    composer(id: $composerId) {
+    composer(where: { id: $composerId }) {
       albums {
-        artworkUrl
         id
+        imageUrl
         spotifyId
         title
       }

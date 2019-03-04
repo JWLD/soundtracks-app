@@ -11,7 +11,7 @@ import * as SC from './style'
 const AlbumTiles = ({ albums, updateCache }) => {
   return albums.map(album => (
     <SC.AlbumTile
-      imageUrl={album.artworkUrl}
+      imageUrl={album.imageUrl}
       key={album.id}
       onClick={() => updateCache({ selectedAlbumId: album.spotifyId })}
     >
