@@ -6,7 +6,7 @@ import { checkStringForSubString } from 'helpers/filtering'
 
 const GET_COMPOSERS = gql`
   query ComposerTiles {
-    composers {
+    composers(orderBy: name_ASC) {
       id
       name
     }
