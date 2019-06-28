@@ -12,7 +12,7 @@ const FilterBar = ({ filter, updateCache }) => (
   <FilterBarWrap>
     <Input
       onChange={e => updateCache({ filter: e.target.value })}
-      placeholder="Filter"
+      placeholder="Search"
       value={filter}
     />
 
