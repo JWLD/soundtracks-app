@@ -33,6 +33,7 @@ const filterAlbums = ({ data, error, loading }) => {
 export default Component => {
   const Wrapper = ({ match }) => (
     <Query
+      pollInterval={5000}
       query={GET_COMPOSER_ALBUMS}
       variables={{ composerId: match.params.composerId }}
     >
