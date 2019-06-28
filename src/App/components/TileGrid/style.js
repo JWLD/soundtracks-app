@@ -16,5 +16,5 @@ export const GridWrap = styled.div`
 export const TileGrid = styled.div`
   display: grid;
   grid-gap: ${gridGap};
-  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
 `
