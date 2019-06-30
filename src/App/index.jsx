@@ -10,16 +10,16 @@ import * as SC from './style'
 
 const App = () => (
   <SC.PageWrap>
-    <SC.MainContentWrap>
+    <SC.FilterContentWrap>
       <FilterBar />
 
-      <SC.GridWrap>
+      <SC.MainContent>
         <Switch>
           <Route component={Composers} exact path={ROUTES.LANDING} />
           <Route component={Albums} path={`${ROUTES.COMPOSER}/:composerId`} />
         </Switch>
-      </SC.GridWrap>
-    </SC.MainContentWrap>
+      </SC.MainContent>
+    </SC.FilterContentWrap>
 
     <SideBar />
   </SC.PageWrap>

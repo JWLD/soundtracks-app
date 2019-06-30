@@ -7,13 +7,13 @@ export const PageWrap = styled.div`
   height: 100vh;
 `
 
-export const MainContentWrap = styled.div`
+export const FilterContentWrap = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 `
 
-export const GridWrap = styled.div`
+export const MainContent = styled.div`
   background: ${vars.color1};
   border-top-right-radius: 0.6rem;
   box-shadow: inset -1.3rem 1.3rem 1.3rem -1.3rem black;
