@@ -6,15 +6,17 @@ import * as ROUTES from 'constants/routes'
 import withData from './query'
 import * as SC from './style'
 
-const ComposerTiles = ({ composers }) => {
-  return composers.map(composer => (
+const Composers = ({ composers }) => {
+  const tiles = composers.map(composer => (
     <SC.ComposerTile key={composer.id} to={`${ROUTES.COMPOSER}/${composer.id}`}>
       <SC.TileContent>{composer.name}</SC.TileContent>
     </SC.ComposerTile>
   ))
+
+  return <SC.TileGrid>{tiles}</SC.TileGrid>
 }
 
-ComposerTiles.propTypes = {
+Composers.propTypes = {
   composers: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -23,4 +25,4 @@ ComposerTiles.propTypes = {
   ).isRequired
 }
 
-export default withData(ComposerTiles)
+export default withData(Composers)

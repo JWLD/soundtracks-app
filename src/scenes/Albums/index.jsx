@@ -8,8 +8,8 @@ import { withUpdateCache } from 'HOCs'
 import withData from './query'
 import * as SC from './style'
 
-const AlbumTiles = ({ albums, updateCache }) => {
-  return albums.map(album => (
+const Albums = ({ albums, updateCache }) => {
+  const tiles = albums.map(album => (
     <SC.AlbumTile
       imageUrl={album.imageUrl}
       key={album.id}
@@ -18,9 +18,11 @@ const AlbumTiles = ({ albums, updateCache }) => {
       <SC.TileContent>{album.title}</SC.TileContent>
     </SC.AlbumTile>
   ))
+
+  return <SC.TileGrid>{tiles}</SC.TileGrid>
 }
 
-AlbumTiles.propTypes = {
+Albums.propTypes = {
   albums: PropTypes.arrayOf(
     PropTypes.shape({
       artworkUrl: PropTypes.string,
@@ -36,4 +38,4 @@ export default compose(
   withRouter,
   withData,
   withUpdateCache
-)(AlbumTiles)
+)(Albums)
