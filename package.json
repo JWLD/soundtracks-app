@@ -17,6 +17,7 @@
     "react-apollo": "^2.3.1",
     "react-dom": "^16.6.3",
     "react-hot-loader": "^4.3.12",
+    "react-icons": "^3.7.0",
     "react-router-dom": "^4.3.1",
     "styled-components": "^4.1.1"
   },
