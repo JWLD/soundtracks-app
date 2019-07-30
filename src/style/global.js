@@ -8,6 +8,7 @@ export default createGlobalStyle`
     border-radius: 0;
     box-sizing: border-box;
     font-family: 'Asap Condensed', sans-serif;
+    font-size: 1.5rem;
     margin: 0;
     padding: 0;
   }
