@@ -7,7 +7,7 @@ export const SideBarWrap = styled.div`
 
   padding-left: 0.8rem;
   color: white;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   width: 30.8rem;
 `
