@@ -7,14 +7,18 @@ import withData from './query'
 import * as SC from './style'
 
 const Composers = ({ composers }) => {
-  const tiles = composers.map(composer => (
-    <SC.ComposerTile key={composer.id} to={`${ROUTES.COMPOSER}/${composer.id}`}>
-      <SC.TileContent>
-        <SC.Image url={composer.imageUrl} />
-        <SC.Name>{composer.name}</SC.Name>
-      </SC.TileContent>
-    </SC.ComposerTile>
-  ))
+  const tiles = composers.map(composer => {
+    const { id, imageUrl, name } = composer
+
+    return (
+      <SC.ComposerTile key={id} to={`${ROUTES.COMPOSER}/${id}`}>
+        <SC.TileContent>
+          <SC.Image url={imageUrl} />
+          <SC.Name>{name}</SC.Name>
+        </SC.TileContent>
+      </SC.ComposerTile>
+    )
+  })
 
   return <SC.TileGrid>{tiles}</SC.TileGrid>
 }
