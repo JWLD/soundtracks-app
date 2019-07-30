@@ -6,6 +6,7 @@ const globalStyle = css`
   * {
     border: 0;
     border-radius: 0;
+    color: white;
     box-sizing: border-box;
     font-family: 'Asap Condensed', sans-serif;
     font-size: 1.5rem;
