@@ -27,7 +27,9 @@ module.exports = {
       openAnalyzer: false,
       reportFilename: path.resolve(__dirname, 'dump/analysis/report.html')
     }),
-    new CircularDependencyPlugin()
+    new CircularDependencyPlugin({
+      exclude: /node_modules/
+    })
   ],
   resolve: {
     extensions: ['.mjs', '.js', '.jsx', '.json'],
