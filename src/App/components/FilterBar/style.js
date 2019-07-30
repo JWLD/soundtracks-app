@@ -13,7 +13,7 @@ export const Input = styled.input`
   background-color: ${vars.color3};
   border-radius: 0.2rem;
   color: white;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   height: 100%;
   padding: 1rem;
   text-transform: capitalize;
@@ -30,7 +30,7 @@ export const Input = styled.input`
 
 export const ResetButton = styled.button`
   color: #aaa;
-  font-size: 3rem;
+  font-size: 2rem;
   height: ${vars.navBarHeight};
   position: absolute;
   right: 0.8rem;
