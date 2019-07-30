@@ -8,6 +8,7 @@ const GET_COMPOSERS = gql`
   query ComposerTiles {
     composers(orderBy: name_ASC) {
       id
+      imageUrl
       name
     }
     filter @client

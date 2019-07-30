@@ -9,7 +9,10 @@ import * as SC from './style'
 const Composers = ({ composers }) => {
   const tiles = composers.map(composer => (
     <SC.ComposerTile key={composer.id} to={`${ROUTES.COMPOSER}/${composer.id}`}>
-      <SC.TileContent>{composer.name}</SC.TileContent>
+      <SC.TileContent>
+        <SC.Image url={composer.imageUrl} />
+        <SC.Name>{composer.name}</SC.Name>
+      </SC.TileContent>
     </SC.ComposerTile>
   ))
 
