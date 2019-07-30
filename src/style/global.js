@@ -1,8 +1,8 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 import * as vars from './variables'
 
-export default createGlobalStyle`
+const globalStyle = css`
   * {
     border: 0;
     border-radius: 0;
@@ -39,3 +39,5 @@ export default createGlobalStyle`
     font-size: 62.5%;
   }
 `
+
+export default createGlobalStyle`${globalStyle}`
