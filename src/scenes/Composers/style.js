@@ -1,4 +1,5 @@
 import { cover } from 'polished'
+import { FaUser } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -33,13 +34,31 @@ export const TileContent = styled.div`
   padding-bottom: 0;
 `
 
+export const ImageWrap = styled.div`
+  padding-bottom: 100%;
+  position: relative;
+`
+
 export const Image = styled.div`
+  ${cover()};
+
   background-image: url(${props => props.url});
   background-position: center;
   background-size: cover;
   border-radius: 0.2rem;
   filter: grayscale();
-  padding-bottom: 100%;
+`
+
+export const NoImageWrap = styled.div`
+  ${mixins.flex};
+  ${cover()};
+
+  background-color: #444;
+`
+
+export const NoImage = styled(FaUser)`
+  fill: #555;
+  font-size: 5rem;
 `
 
 export const Name = styled.span`

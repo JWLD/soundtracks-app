@@ -13,7 +13,16 @@ const Composers = ({ composers }) => {
     return (
       <SC.ComposerTile key={id} to={`${ROUTES.COMPOSER}/${id}`}>
         <SC.TileContent>
-          <SC.Image url={imageUrl} />
+          <SC.ImageWrap>
+            {imageUrl ? (
+              <SC.Image url={imageUrl} />
+            ) : (
+              <SC.NoImageWrap>
+                <SC.NoImage />
+              </SC.NoImageWrap>
+            )}
+          </SC.ImageWrap>
+
           <SC.Name>{name}</SC.Name>
         </SC.TileContent>
       </SC.ComposerTile>
