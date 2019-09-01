@@ -1,0 +1,8 @@
+query ComposersQuery {
+  composers(orderBy: name_ASC) {
+    id
+    imageUrl
+    name
+  }
+  filter @client
+}

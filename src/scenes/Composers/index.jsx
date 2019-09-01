@@ -1,13 +1,18 @@
-import PropTypes from 'prop-types'
+import { useQuery } from '@apollo/react-hooks'
 import React from 'react'
 
 import ROUTES from 'constants/routes'
 
-import withData from './query'
+import { ComposersQuery } from './gql'
+import { getComposers } from './helpers'
 import * as SC from './style'
 
-const Composers = ({ composers }) => {
-  const tiles = composers.map(composer => {
+const Composers = () => {
+  const { data, loading } = useQuery(ComposersQuery)
+
+  if (loading) return <div>Loading</div>
+
+  const tiles = getComposers(data).map(composer => {
     const { id, imageUrl, name } = composer
 
     return (
@@ -32,13 +37,4 @@ const Composers = ({ composers }) => {
   return <SC.TileGrid>{tiles}</SC.TileGrid>
 }
 
-Composers.propTypes = {
-  composers: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
-    })
-  ).isRequired
-}
-
-export default withData(Composers)
+export default Composers
