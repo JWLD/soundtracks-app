@@ -1,6 +1,6 @@
+import compose from 'lodash/flowRight'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { compose } from 'react-apollo'
 
 import { withUpdateCache } from 'HOCs'
 
