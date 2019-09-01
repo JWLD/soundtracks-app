@@ -10,7 +10,7 @@ import * as SC from './style'
 const Composers = () => {
   const { data, loading } = useQuery(ComposersQuery)
 
-  if (loading) return <div>Loading</div>
+  if (loading) return <SC.Spinner />
 
   const tiles = getComposers(data).map(composer => {
     const { id, imageUrl, name } = composer
