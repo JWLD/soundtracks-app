@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { compose } from 'react-apollo'
@@ -18,7 +17,7 @@ const FilterBar = ({ filter, updateCache }) => (
 
     {filter && (
       <ResetButton onClick={() => updateCache({ filter: '' })}>
-        <FontAwesomeIcon icon="times-circle" />
+        R
       </ResetButton>
     )}
   </FilterBarWrap>
