@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import * as ROUTES from 'constants/routes'
+import ROUTES from 'constants/routes'
 
 import withData from './query'
 import * as SC from './style'

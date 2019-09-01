@@ -1,2 +1,4 @@
-export const COMPOSER = '/composer'
-export const LANDING = '/'
+export default {
+  COMPOSER: '/composer',
+  LANDING: '/'
+}

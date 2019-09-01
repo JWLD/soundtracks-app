@@ -2,7 +2,7 @@ import React from 'react'
 import { hot } from 'react-hot-loader'
 import { Route, Switch } from 'react-router-dom'
 
-import * as ROUTES from 'constants/routes'
+import ROUTES from 'constants/routes'
 import { Albums, Composers } from 'scenes'
 
 import { FilterBar, SideBar } from './components'
