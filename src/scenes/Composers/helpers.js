@@ -1,8 +1,8 @@
-import { checkStringForSubString } from 'helpers/filtering'
+import { checkStringForSubstring } from 'helpers/filtering'
 
 export const getComposers = ({ composers, filter }) => {
   return composers.filter(composer => {
-    return checkStringForSubString({
+    return checkStringForSubstring({
       string: composer.name,
       subString: filter
     })
