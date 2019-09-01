@@ -39,13 +39,15 @@ export const ImageWrap = styled.div`
   position: relative;
 `
 
+const imageBorderRadius = '0.2rem'
+
 export const Image = styled.div`
   ${cover()};
 
   background-image: url(${props => props.url});
   background-position: center;
   background-size: cover;
-  border-radius: 0.2rem;
+  border-radius: ${imageBorderRadius};
   filter: grayscale();
 `
 
@@ -54,6 +56,7 @@ export const NoImageWrap = styled.div`
   ${cover()};
 
   background-color: #444;
+  border-radius: ${imageBorderRadius};
 `
 
 export const NoImage = styled(FaUser)`
