@@ -59,7 +59,7 @@ export const NoImageWrap = styled.div`
   border-radius: ${imageBorderRadius};
 `
 
-export const NoImage = styled(FaUser)`
+export const NoImageIcon = styled(FaUser)`
   fill: #555;
   font-size: 5rem;
 `

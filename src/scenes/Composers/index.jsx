@@ -18,7 +18,7 @@ const Composers = ({ composers }) => {
               <SC.Image url={imageUrl} />
             ) : (
               <SC.NoImageWrap>
-                <SC.NoImage />
+                <SC.NoImageIcon />
               </SC.NoImageWrap>
             )}
           </SC.ImageWrap>
