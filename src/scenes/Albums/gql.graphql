@@ -1,0 +1,11 @@
+query AlbumsQuery($composerId: ID!) {
+  composer(where: { id: $composerId }) {
+    albums(orderBy: year_DESC) {
+      id
+      imageUrl
+      spotifyId
+      title
+    }
+  }
+  filter @client
+}

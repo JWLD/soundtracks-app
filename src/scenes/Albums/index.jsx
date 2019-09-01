@@ -1,20 +1,24 @@
-import PropTypes from 'prop-types'
+import { useQuery } from '@apollo/react-hooks'
 import React from 'react'
-import compose from 'lodash/flowRight'
-import { withRouter } from 'react-router-dom'
 
-import { withUpdateCache } from 'HOCs'
+import { useRouteParams } from 'hooks'
 
-import withData from './query'
+import { AlbumsQuery } from './gql'
+import { getAlbums } from './helpers'
 import * as SC from './style'
 
-const Albums = ({ albums, updateCache }) => {
-  const tiles = albums.map(album => (
-    <SC.AlbumTile
-      imageUrl={album.imageUrl}
-      key={album.id}
-      onClick={() => updateCache({ selectedAlbumId: album.spotifyId })}
-    >
+const Albums = () => {
+  const { composerId } = useRouteParams()
+
+  const { data, loading } = useQuery(AlbumsQuery, {
+    pollInterval: 10000,
+    variables: { composerId }
+  })
+
+  if (loading) return <SC.Spinner />
+
+  const tiles = getAlbums(data).map(album => (
+    <SC.AlbumTile imageUrl={album.imageUrl} key={album.id}>
       <SC.TileContent>{album.title}</SC.TileContent>
     </SC.AlbumTile>
   ))
@@ -22,20 +26,4 @@ const Albums = ({ albums, updateCache }) => {
   return <SC.TileGrid>{tiles}</SC.TileGrid>
 }
 
-Albums.propTypes = {
-  albums: PropTypes.arrayOf(
-    PropTypes.shape({
-      artworkUrl: PropTypes.string,
-      id: PropTypes.string.isRequired,
-      spotifyId: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired
-    })
-  ).isRequired,
-  updateCache: PropTypes.func.isRequired
-}
-
-export default compose(
-  withRouter,
-  withData,
-  withUpdateCache
-)(Albums)
+export default Albums

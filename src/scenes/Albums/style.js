@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-import { mixins } from 'style'
+import { components, mixins } from 'style'
+
+export const { Spinner } = components
 
 export const TileGrid = styled.div`
   display: grid;
