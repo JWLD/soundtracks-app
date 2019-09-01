@@ -1,4 +1,3 @@
-import * as mixins from './mixins'
-import * as vars from './variables'
-
-export { mixins, vars }
+export * as components from './components'
+export * as mixins from './mixins'
+export * as vars from './variables'
