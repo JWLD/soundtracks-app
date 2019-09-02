@@ -41,7 +41,7 @@ export const Input = styled.input`
   color: white;
   font-size: 1.8rem;
   height: 100%;
-  padding: 1rem;
+  padding: 1rem 0.8rem;
   text-transform: capitalize;
   width: 100%;
 
