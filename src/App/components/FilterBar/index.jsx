@@ -5,22 +5,18 @@ import React from 'react'
 import { withUpdateCache } from 'HOCs'
 
 import withData from './query'
-import { Input, ResetButton, FilterBarWrap } from './style'
+import * as SC from './style'
 
 const FilterBar = ({ filter, updateCache }) => (
-  <FilterBarWrap>
-    <Input
+  <SC.FilterBarWrap>
+    <SC.Input
       onChange={e => updateCache({ filter: e.target.value })}
       placeholder="Search"
       value={filter}
     />
 
-    {filter && (
-      <ResetButton onClick={() => updateCache({ filter: '' })}>
-        R
-      </ResetButton>
-    )}
-  </FilterBarWrap>
+    {filter && <SC.ResetIcon onClick={() => updateCache({ filter: '' })} />}
+  </SC.FilterBarWrap>
 )
 
 FilterBar.propTypes = {

@@ -1,3 +1,4 @@
+import { FaTimesCircle } from 'react-icons/fa'
 import styled from 'styled-components'
 
 import { vars } from 'style'
@@ -29,15 +30,16 @@ export const Input = styled.input`
   }
 `
 
-export const ResetButton = styled.button`
-  color: #aaa;
+export const ResetIcon = styled(FaTimesCircle)`
+  fill: #aaa;
+  cursor: pointer;
   font-size: 2rem;
   height: ${vars.navBarHeight};
   position: absolute;
-  right: 0.8rem;
+  right: 0.7rem;
   top: 0;
 
   :hover {
-    color: #bbb;
+    fill: #bbb;
   }
 `
