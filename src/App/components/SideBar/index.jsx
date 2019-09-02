@@ -19,9 +19,9 @@ const SideBar = () => {
   )
 
   return (
-    <SC.SideBarWrap>
+    <SC.SideBar>
       {selectedAlbumId ? renderIframe() : 'Please select an album.'}
-    </SC.SideBarWrap>
+    </SC.SideBar>
   )
 }
 

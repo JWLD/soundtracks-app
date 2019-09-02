@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { mixins } from 'style'
 
-export const SideBarWrap = styled.div`
+export const SideBar = styled.div`
   ${mixins.flex};
 
   padding-left: 0.8rem;
