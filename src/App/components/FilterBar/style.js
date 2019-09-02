@@ -5,7 +5,7 @@ import { vars } from 'style'
 
 export const FilterBarWrap = styled.div`
   flex-shrink: 0;
-  height: ${vars.navBarHeight};
+  height: ${vars.topNavHeight};
   padding: 0.8rem;
   padding-right: 0;
   position: relative;
@@ -34,7 +34,7 @@ export const ResetIcon = styled(FaTimesCircle)`
   fill: #aaa;
   cursor: pointer;
   font-size: 2rem;
-  height: ${vars.navBarHeight};
+  height: ${vars.topNavHeight};
   position: absolute;
   right: 0.7rem;
   top: 0;
