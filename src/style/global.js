@@ -15,9 +15,7 @@ const globalStyle = css`
   }
 
   a {
-    :hover {
-      cursor: pointer;
-    }
+    cursor: pointer;
   }
 
   body {
@@ -26,13 +24,10 @@ const globalStyle = css`
 
   button {
     background-color: transparent;
+    cursor: pointer;
 
     :focus {
       outline: none;
-    }
-
-    :hover {
-      cursor: pointer;
     }
   }
 
