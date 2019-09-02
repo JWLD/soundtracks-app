@@ -11,7 +11,7 @@ const FilterBar = () => {
   const { data } = useQuery(FilterBarQuery)
 
   return (
-    <SC.FilterBarWrap>
+    <SC.FilterBar>
       <SC.Input
         onChange={e => updateCache({ filter: e.target.value })}
         placeholder="Search"
@@ -21,7 +21,7 @@ const FilterBar = () => {
       {data.filter && (
         <SC.ResetIcon onClick={() => updateCache({ filter: '' })} />
       )}
-    </SC.FilterBarWrap>
+    </SC.FilterBar>
   )
 }
 

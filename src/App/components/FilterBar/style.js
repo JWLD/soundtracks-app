@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { vars } from 'style'
 
-export const FilterBarWrap = styled.div`
+export const FilterBar = styled.div`
   flex-shrink: 0;
   height: ${vars.topNavHeight};
   padding: 0.8rem;
