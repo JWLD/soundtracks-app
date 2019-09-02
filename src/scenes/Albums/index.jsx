@@ -1,13 +1,14 @@
 import { useQuery } from '@apollo/react-hooks'
 import React from 'react'
 
-import { useRouteParams } from 'hooks'
+import { useApolloCache, useRouteParams } from 'hooks'
 
 import { AlbumsQuery } from './gql'
 import { getAlbums } from './helpers'
 import * as SC from './style'
 
 const Albums = () => {
+  const { updateCache } = useApolloCache()
   const { composerId } = useRouteParams()
 
   const { data, loading } = useQuery(AlbumsQuery, {
@@ -18,7 +19,11 @@ const Albums = () => {
   if (loading) return <SC.Spinner />
 
   const tiles = getAlbums(data).map(album => (
-    <SC.AlbumTile imageUrl={album.imageUrl} key={album.id}>
+    <SC.AlbumTile
+      imageUrl={album.imageUrl}
+      key={album.id}
+      onClick={() => updateCache({ selectedAlbumId: album.spotifyId })}
+    >
       <SC.TileContent>{album.title}</SC.TileContent>
     </SC.AlbumTile>
   ))
