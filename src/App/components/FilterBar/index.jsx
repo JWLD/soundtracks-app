@@ -1,30 +1,28 @@
-import compose from 'lodash/flowRight'
-import PropTypes from 'prop-types'
+import { useQuery } from '@apollo/react-hooks'
 import React from 'react'
 
-import { withUpdateCache } from 'HOCs'
+import { useApolloCache } from 'hooks'
 
-import withData from './query'
+import { FilterBarQuery } from './gql'
 import * as SC from './style'
 
-const FilterBar = ({ filter, updateCache }) => (
-  <SC.FilterBarWrap>
-    <SC.Input
-      onChange={e => updateCache({ filter: e.target.value })}
-      placeholder="Search"
-      value={filter}
-    />
+const FilterBar = () => {
+  const { updateCache } = useApolloCache()
+  const { data } = useQuery(FilterBarQuery)
 
-    {filter && <SC.ResetIcon onClick={() => updateCache({ filter: '' })} />}
-  </SC.FilterBarWrap>
-)
+  return (
+    <SC.FilterBarWrap>
+      <SC.Input
+        onChange={e => updateCache({ filter: e.target.value })}
+        placeholder="Search"
+        value={data.filter}
+      />
 
-FilterBar.propTypes = {
-  filter: PropTypes.string.isRequired,
-  updateCache: PropTypes.func.isRequired
+      {data.filter && (
+        <SC.ResetIcon onClick={() => updateCache({ filter: '' })} />
+      )}
+    </SC.FilterBarWrap>
+  )
 }
 
-export default compose(
-  withUpdateCache,
-  withData
-)(FilterBar)
+export default FilterBar
