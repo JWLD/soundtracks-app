@@ -1,14 +1,14 @@
 import { useQuery } from '@apollo/react-hooks'
 import React from 'react'
 
-import { useApolloCache, useRouteParams } from 'hooks'
+import { useCache, useRouteParams } from 'hooks'
 
 import { AlbumsQuery } from './gql'
 import { getAlbums } from './helpers'
 import * as SC from './style'
 
 const Albums = () => {
-  const { updateCache } = useApolloCache()
+  const { updateCache } = useCache()
   const { composerId } = useRouteParams()
 
   const { data, loading } = useQuery(AlbumsQuery, {

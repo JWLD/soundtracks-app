@@ -1,13 +1,13 @@
 import { useQuery } from '@apollo/react-hooks'
 import React from 'react'
 
-import { useApolloCache } from 'hooks'
+import { useCache } from 'hooks'
 
 import { FilterBarQuery } from './gql'
 import * as SC from './style'
 
 const FilterBar = () => {
-  const { updateCache } = useApolloCache()
+  const { updateCache } = useCache()
   const { data } = useQuery(FilterBarQuery)
 
   return (

@@ -1,2 +1,2 @@
-export useApolloCache from './useApolloCache'
+export useCache from './useCache'
 export useRouteParams from './useRouteParams'
