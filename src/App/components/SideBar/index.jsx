@@ -1,10 +1,13 @@
-import PropTypes from 'prop-types'
+import { useQuery } from '@apollo/react-hooks'
 import React from 'react'
 
+import { SideBarQuery } from './gql'
 import * as SC from './style'
-import withData from './query'
 
-const SideBar = ({ selectedAlbumId }) => {
+const SideBar = () => {
+  const { data } = useQuery(SideBarQuery)
+  const { selectedAlbumId } = data
+
   const renderIframe = () => (
     <SC.SpotifyIframe
       allow="encrypted-media"
@@ -22,8 +25,4 @@ const SideBar = ({ selectedAlbumId }) => {
   )
 }
 
-SideBar.propTypes = {
-  selectedAlbumId: PropTypes.string.isRequired
-}
-
-export default withData(SideBar)
+export default SideBar
