@@ -18,9 +18,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.mjs', '.graphql', '.js', '.jsx'],
-    modules: [
-      path.resolve(__dirname, 'src'),
-      'node_modules'
-    ]
+    modules: ['./src', 'node_modules']
   }
 }
