@@ -51,7 +51,11 @@ module.exports = {
     'sort-destructure-keys/sort-destructure-keys': 'error'
   },
   settings: {
-    'import/resolver': 'webpack',
+    'import/resolver': {
+      webpack: {
+        config: path.resolve(__dirname, 'webpack/webpack.common.js')
+      }
+    },
     react: {
       version: 'detect'
     }
