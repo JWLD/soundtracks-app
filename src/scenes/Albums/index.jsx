@@ -22,7 +22,7 @@ const Albums = () => {
     <SC.AlbumTile
       imageUrl={album.imageUrl}
       key={album.id}
-      onClick={() => updateCache({ selectedAlbumId: album.spotifyId })}
+      onClick={() => updateCache({ activeAlbumId: album.spotifyId })}
     >
       <SC.TileContent>{album.title}</SC.TileContent>
     </SC.AlbumTile>

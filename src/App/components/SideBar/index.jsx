@@ -6,21 +6,21 @@ import * as SC from './style'
 
 const SideBar = () => {
   const { data } = useQuery(SideBarQuery)
-  const { selectedAlbumId } = data
+  const { activeAlbumId } = data
 
   const renderIframe = () => (
     <SC.SpotifyIframe
       allow="encrypted-media"
       allowtransparency="true"
       frameBorder="0"
-      key={selectedAlbumId}
-      src={`https://open.spotify.com/embed/album/${selectedAlbumId}`}
+      key={activeAlbumId}
+      src={`https://open.spotify.com/embed/album/${activeAlbumId}`}
     />
   )
 
   return (
     <SC.SideBar>
-      {selectedAlbumId ? renderIframe() : 'Please select an album.'}
+      {activeAlbumId ? renderIframe() : 'Please select an album.'}
     </SC.SideBar>
   )
 }
