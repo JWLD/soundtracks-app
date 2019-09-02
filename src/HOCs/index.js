@@ -1,1 +1,0 @@
-export withUpdateCache from './withUpdateCache'
