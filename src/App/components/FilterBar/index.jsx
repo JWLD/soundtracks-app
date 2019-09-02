@@ -8,19 +8,19 @@ import * as SC from './style'
 
 const FilterBar = () => {
   const { updateCache } = useCache()
+
   const { data } = useQuery(FilterBarQuery)
+  const { filter } = data
 
   return (
     <SC.FilterBar>
       <SC.Input
         onChange={e => updateCache({ filter: e.target.value })}
         placeholder="Search"
-        value={data.filter}
+        value={filter}
       />
 
-      {data.filter && (
-        <SC.ResetIcon onClick={() => updateCache({ filter: '' })} />
-      )}
+      {filter && <SC.ResetIcon onClick={() => updateCache({ filter: '' })} />}
     </SC.FilterBar>
   )
 }
