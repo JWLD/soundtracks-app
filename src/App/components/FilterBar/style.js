@@ -23,7 +23,7 @@ export const HomeLink = styled(Link)`
 
   border-radius: 0.2rem;
   height: ${homeButtonSize};
-  margin-right: ${navPadding};
+  margin-right: 0.5rem;
   width: ${homeButtonSize};
 
   :hover {
@@ -32,6 +32,7 @@ export const HomeLink = styled(Link)`
 `
 
 export const HomeIcon = styled(FaHome)`
+  fill: #aaa;
   font-size: 2rem;
 `
 
