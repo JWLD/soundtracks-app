@@ -1,10 +1,10 @@
-import { checkStringForSubstring } from 'helpers/filtering'
+import { checkStringForsubstring } from 'helpers/filtering'
 
 export const getComposers = ({ composers, filter }) => {
   return composers.filter(composer => {
-    return checkStringForSubstring({
+    return checkStringForsubstring({
       string: composer.name,
-      subString: filter
+      substring: filter
     })
   })
 }

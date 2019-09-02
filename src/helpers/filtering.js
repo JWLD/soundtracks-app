@@ -1,6 +1,6 @@
-export const checkStringForSubstring = ({ string, subString }) => {
+export const checkStringForsubstring = ({ string, substring }) => {
   const normalisedString = string.toLowerCase()
-  const normalisedSubString = subString.toLowerCase()
+  const normalisedsubstring = substring.toLowerCase()
 
-  return normalisedString.includes(normalisedSubString)
+  return normalisedString.includes(normalisedsubstring)
 }
