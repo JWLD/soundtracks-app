@@ -1,4 +1,1 @@
-.babelrc
-.eslintrc.json
-package.json
 webpack.config.js
