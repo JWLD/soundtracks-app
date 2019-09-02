@@ -1,16 +1,9 @@
-const CircularDependencyPlugin = require('circular-dependency-plugin')
 const path = require('path')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 module.exports = {
-  devServer: {
-    contentBase: './public',
-    historyApiFallback: true,
-    open: true
-  },
-  devtool: 'eval-source-map',
+  context: path.resolve(__dirname, '..'),
   entry: './src/index.js',
-  mode: 'development',
   module: {
     rules: [{
       test: /\.jsx?$/,
@@ -30,9 +23,6 @@ module.exports = {
       analyzerMode: 'static',
       openAnalyzer: false,
       reportFilename: path.resolve(__dirname, 'dump/analysis/report.html')
-    }),
-    new CircularDependencyPlugin({
-      exclude: /node_modules/
     })
   ],
   resolve: {
