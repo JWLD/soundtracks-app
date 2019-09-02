@@ -1,14 +1,38 @@
-import { FaTimesCircle } from 'react-icons/fa'
+import { FaHome, FaTimesCircle } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { vars } from 'style'
+import { mixins, vars } from 'style'
+
+const navPadding = '0.8rem'
 
 export const FilterBar = styled.div`
+  ${mixins.flex};
+
   flex-shrink: 0;
   height: ${vars.topNavHeight};
-  padding: 0.8rem;
+  padding: ${navPadding};
   padding-right: 0;
   position: relative;
+`
+
+const homeButtonSize = `calc(${vars.topNavHeight} - ${navPadding} * 2)`
+
+export const HomeLink = styled(Link)`
+  ${mixins.flex};
+
+  border-radius: 0.2rem;
+  height: ${homeButtonSize};
+  margin-right: ${navPadding};
+  width: ${homeButtonSize};
+
+  :hover {
+    background-color: ${vars.color3};
+  }
+`
+
+export const HomeIcon = styled(FaHome)`
+  font-size: 2rem;
 `
 
 export const Input = styled.input`
