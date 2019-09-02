@@ -31,8 +31,8 @@ export const Input = styled.input`
 `
 
 export const ResetIcon = styled(FaTimesCircle)`
-  fill: #aaa;
   cursor: pointer;
+  fill: #aaa;
   font-size: 2rem;
   height: ${vars.topNavHeight};
   position: absolute;

@@ -5,9 +5,9 @@ import { mixins } from 'style'
 export const SideBar = styled.div`
   ${mixins.flex};
 
-  padding-left: 0.8rem;
   color: white;
   font-size: 1.8rem;
+  padding-left: 0.8rem;
   text-align: center;
   width: 30.8rem;
 `

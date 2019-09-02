@@ -29,7 +29,6 @@ export const ComposerTile = styled(Link)`
 `
 
 export const TileContent = styled.div`
-  ${mixins.flexVertical};
   ${cover()};
 
   padding: ${tilePadding};
