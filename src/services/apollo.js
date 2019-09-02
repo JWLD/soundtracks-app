@@ -2,14 +2,14 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloClient } from 'apollo-client'
 import { ApolloLink } from 'apollo-link'
 import { HttpLink } from 'apollo-link-http'
-import { withClientState } from 'apollo-link-state'
 
 const cache = new InMemoryCache()
 
-const stateLink = withClientState({
-  cache,
-  defaults: { activeAlbumId: '', filter: '' },
-  resolvers: {}
+cache.writeData({
+  data: {
+    activeAlbumId: '',
+    filter: ''
+  }
 })
 
 const httpLink = new HttpLink({
@@ -18,7 +18,8 @@ const httpLink = new HttpLink({
 
 const client = new ApolloClient({
   cache,
-  link: ApolloLink.from([stateLink, httpLink])
+  link: ApolloLink.from([httpLink]),
+  resolvers: {}
 })
 
 export default client
