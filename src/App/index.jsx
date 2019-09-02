@@ -1,5 +1,5 @@
 import React from 'react'
-import { hot } from 'react-hot-loader'
+import { hot } from 'react-hot-loader/root'
 import { Route, Switch } from 'react-router-dom'
 
 import ROUTES from 'constants/routes'
@@ -25,4 +25,4 @@ const App = () => (
   </SC.PageWrap>
 )
 
-export default hot(module)(App)
+export default hot(App)
