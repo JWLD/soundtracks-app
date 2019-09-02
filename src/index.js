@@ -1,13 +1,13 @@
 import React from 'react'
 import { ApolloProvider } from 'react-apollo'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
 import App from './App'
 import client from './services/apollo'
 import GlobalStyle from './style/global'
 
-ReactDOM.render(
+const app = (
   <>
     <GlobalStyle />
 
@@ -16,6 +16,7 @@ ReactDOM.render(
         <App />
       </ApolloProvider>
     </BrowserRouter>
-  </>,
-  document.getElementById('root')
+  </>
 )
+
+render(app, document.getElementById('root'))
