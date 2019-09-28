@@ -1,5 +1,5 @@
-query AlbumsQuery($composerId: ID!) {
-  composer(where: { id: $composerId }) {
+query AlbumsQuery($artistId: ID!) {
+  artist(where: { id: $artistId }) {
     albums(orderBy: year_DESC) {
       id
       imageUrl

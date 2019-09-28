@@ -16,7 +16,7 @@ export const TileGrid = styled.div`
 const nameHeight = '3.5rem'
 const tilePadding = '0.8rem'
 
-export const ComposerTile = styled(Link)`
+export const ArtistTile = styled(Link)`
   background-color: #333;
   border-radius: 0.3rem;
   box-shadow: 0 0.5rem 1.5rem -0.5rem black;

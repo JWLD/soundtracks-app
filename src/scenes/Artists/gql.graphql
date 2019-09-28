@@ -1,0 +1,8 @@
+query ArtistsQuery {
+  artists(orderBy: name_ASC) {
+    id
+    imageUrl
+    name
+  }
+  filter @client
+}

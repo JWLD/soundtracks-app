@@ -9,11 +9,11 @@ import * as SC from './style'
 
 const Albums = () => {
   const { updateCache } = useCache()
-  const { composerId } = useRouteParams()
+  const { artistId } = useRouteParams()
 
   const { data, loading } = useQuery(AlbumsQuery, {
     pollInterval: 10000,
-    variables: { composerId }
+    variables: { artistId }
   })
 
   if (loading) return <SC.Spinner />

@@ -1,9 +1,9 @@
 import { checkStringForsubstring } from 'helpers/filtering'
 
-export const getComposers = ({ composers, filter }) => {
-  return composers.filter(composer => {
+export const getArtists = ({ artists, filter }) => {
+  return artists.filter(artist => {
     return checkStringForsubstring({
-      string: composer.name,
+      string: artist.name,
       substring: filter
     })
   })

@@ -1,2 +1,2 @@
 export Albums from './Albums'
-export Composers from './Composers'
+export Artists from './Artists'

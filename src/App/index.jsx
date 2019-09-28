@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader/root'
 import { Route, Switch } from 'react-router-dom'
 
 import ROUTES from 'constants/routes'
-import { Albums, Composers } from 'scenes'
+import { Albums, Artists } from 'scenes'
 
 import { FilterBar, SideBar } from './components'
 import * as SC from './style'
@@ -15,8 +15,8 @@ const App = () => (
 
       <SC.MainContent>
         <Switch>
-          <Route component={Composers} exact path={ROUTES.LANDING} />
-          <Route component={Albums} path={`${ROUTES.COMPOSER}/:composerId`} />
+          <Route component={Artists} exact path={ROUTES.LANDING} />
+          <Route component={Albums} path={`${ROUTES.ARTIST}/:artistId`} />
         </Switch>
       </SC.MainContent>
     </SC.FilterContentWrap>

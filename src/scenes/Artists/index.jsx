@@ -3,20 +3,20 @@ import React from 'react'
 
 import ROUTES from 'constants/routes'
 
-import { ComposersQuery } from './gql'
-import { getComposers } from './helpers'
+import { ArtistsQuery } from './gql'
+import { getArtists } from './helpers'
 import * as SC from './style'
 
-const Composers = () => {
-  const { data, loading } = useQuery(ComposersQuery)
+const Artists = () => {
+  const { data, loading } = useQuery(ArtistsQuery)
 
   if (loading) return <SC.Spinner />
 
-  const tiles = getComposers(data).map(composer => {
-    const { id, imageUrl, name } = composer
+  const tiles = getArtists(data).map(artist => {
+    const { id, imageUrl, name } = artist
 
     return (
-      <SC.ComposerTile key={id} to={`${ROUTES.COMPOSER}/${id}`}>
+      <SC.ArtistTile key={id} to={`${ROUTES.ARTIST}/${id}`}>
         <SC.TileContent>
           <SC.ImageWrap>
             {imageUrl ? (
@@ -30,11 +30,11 @@ const Composers = () => {
 
           <SC.Name>{name}</SC.Name>
         </SC.TileContent>
-      </SC.ComposerTile>
+      </SC.ArtistTile>
     )
   })
 
   return <SC.TileGrid>{tiles}</SC.TileGrid>
 }
 
-export default Composers
+export default Artists

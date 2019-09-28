@@ -1,4 +1,4 @@
 export default {
-  COMPOSER: '/composer',
+  ARTIST: '/artist',
   LANDING: '/'
 }
