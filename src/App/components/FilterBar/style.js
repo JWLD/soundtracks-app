@@ -43,7 +43,6 @@ export const Input = styled.input`
   font-size: 1.8rem;
   height: 100%;
   padding: 1rem 0.8rem;
-  text-transform: capitalize;
   width: 100%;
 
   :focus {
