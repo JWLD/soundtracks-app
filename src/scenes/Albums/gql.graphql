@@ -1,11 +1,9 @@
 query AlbumsQuery($artistId: ID!) {
-  artist(where: { id: $artistId }) {
-    albums(orderBy: year_DESC) {
-      id
-      imageUrl
-      spotifyId
-      title
-    }
+  albums(artistId: $artistId, orderBy: year_DESC) {
+    id
+    imageUrl
+    spotifyId
+    title
   }
   filter @client
 }
