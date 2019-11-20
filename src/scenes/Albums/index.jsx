@@ -12,7 +12,6 @@ const Albums = () => {
   const { artistId } = useRouteParams()
 
   const { data, loading } = useQuery(AlbumsQuery, {
-    pollInterval: 10000,
     variables: { artistId }
   })
 
