@@ -13,7 +13,7 @@ cache.writeData({
 })
 
 const httpLink = new HttpLink({
-  uri: 'http://localhost:4000/graphql'
+  uri: 'http://localhost:3000/graphql'
 })
 
 const client = new ApolloClient({
