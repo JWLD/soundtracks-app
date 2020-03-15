@@ -15,7 +15,7 @@ cache.writeData({
 const httpLink = new HttpLink({
   uri:
     process.env.NODE_ENV === 'production'
-      ? 'https://soundtracks.herokuapp.com'
+      ? 'https://soundtracks.herokuapp.com/graphql'
       : 'http://localhost:3000/graphql'
 })
 
