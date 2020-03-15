@@ -46,7 +46,7 @@
     "webpack-merge": "^4.2.2"
   },
   "scripts": {
-    "build": "webpack --progress --config ./webpack/webpack.prod.js",
+    "build": "webpack --config ./webpack/webpack.prod.js",
     "dev": "webpack-dev-server --hot --config ./webpack/webpack.dev.js",
     "lint": "eslint --ext .js,.jsx src/",
     "lint:fix": "eslint --fix --ext .js,.jsx src/"
