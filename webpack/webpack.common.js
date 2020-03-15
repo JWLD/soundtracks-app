@@ -16,8 +16,7 @@ module.exports = {
     }]
   },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, '../../soundtracks-server/dist')
+    filename: 'bundle.js'
   },
   plugins: [
     new CleanWebpackPlugin(),
