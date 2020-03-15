@@ -13,7 +13,10 @@ cache.writeData({
 })
 
 const httpLink = new HttpLink({
-  uri: 'http://localhost:3000/graphql'
+  uri:
+    process.env.NODE_ENV === 'production'
+      ? 'https://soundtracks.herokuapp.com'
+      : 'http://localhost:3000/graphql'
 })
 
 const client = new ApolloClient({
