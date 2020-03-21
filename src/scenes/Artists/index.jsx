@@ -8,7 +8,9 @@ import { getArtists } from './helpers'
 import * as SC from './style'
 
 const Artists = () => {
-  const { data, loading } = useQuery(ArtistsQuery)
+  const { data, loading } = useQuery(ArtistsQuery, {
+    fetchPolicy: 'cache-and-network'
+  })
 
   if (loading) return <SC.Spinner />
 

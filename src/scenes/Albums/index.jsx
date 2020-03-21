@@ -12,6 +12,7 @@ const Albums = () => {
   const { artistId } = useRouteParams()
 
   const { data, loading } = useQuery(AlbumsQuery, {
+    fetchPolicy: 'cache-and-network',
     variables: { artistId }
   })
 
