@@ -12,7 +12,7 @@ const Artists = () => {
     fetchPolicy: 'cache-and-network'
   })
 
-  if (loading) return <SC.Spinner />
+  if (!data && loading) return <SC.Spinner />
 
   const tiles = getArtists(data).map(artist => {
     const { id, imageUrl, name } = artist

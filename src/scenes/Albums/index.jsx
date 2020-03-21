@@ -16,7 +16,7 @@ const Albums = () => {
     variables: { artistId }
   })
 
-  if (loading) return <SC.Spinner />
+  if (!data && loading) return <SC.Spinner />
 
   const tiles = getAlbums(data).map(album => (
     <SC.AlbumTile
