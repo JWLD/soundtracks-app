@@ -21,7 +21,7 @@ const FilterBar = () => {
 
       <SC.Input
         onChange={e => updateCache({ filter: e.target.value })}
-        placeholder="Search"
+        placeholder="Filter"
         value={filter}
       />
 
